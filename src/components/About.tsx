@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 
 const skills = [
   "Python",
-  "C++",
+  "C/C++",
   "TypeScript",
   "Machine Learning",
-  "Deep Learning",
   "Data Analysis",
   "React",
   "TensorFlow",
@@ -32,26 +31,33 @@ export default function About() {
             {/* Left: Avatar/Visual */}
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-64 h-64 rounded-full bg-gradient-to-br from-accent/20 to-accent-glow/20 flex items-center justify-center border border-accent/30">
-                  <div className="w-56 h-56 rounded-full bg-secondary flex items-center justify-center text-6xl font-bold text-accent">
-                    AC
-                  </div>
+                <div className="absolute -inset-6 rounded-[44px] bg-accent/20 blur-2xl -z-10" />
+                <div className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-[36px] border-2 border-accent overflow-hidden shadow-[0_25px_80px_rgba(255,75,159,0.35)]">
+                  <img
+                    src="/UN_headshot.jpg"
+                    alt="Portrait of Uyen Nguyen"
+                    className="w-full h-full object-cover object-center brightness-[0.9]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-black/25 via-transparent to-black/35" />
                 </div>
-                <div className="absolute -z-10 inset-0 bg-accent/20 rounded-full blur-2xl"></div>
               </div>
             </div>
 
             {/* Right: Text Content */}
             <div>
               <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-6">
-                I'm a graduate student specializing in Applied Mathematics and Computer Science, 
-                with a deep passion for machine learning and algorithmic problem-solving. Currently, 
-                I'm exploring the intersection of mathematical theory and practical AI applications.
+                I'm a senior double-majoring in Mathematics and Computer Science at Denison University, 
+                with a brain that naturally thinks in theorems, proofs, and algorithms. 
+                Most of my time is spent at the intersection of theory and practice, 
+                where I get to turn abstract ideas into things 
+                that actually run.
               </p>
               <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
-                My work focuses on developing intelligent systems that leverage advanced mathematical 
-                concepts to solve real-world challenges. I value collaboration, continuous learning, 
-                and creating solutions that make a meaningful impact.
+                I care about mathematical rigor, clean experiments, and code that reflects 
+                the underlying structure of the problem. Whether I'm verifying the GRH, 
+                modeling voter behavior, or building ML systems, my goal is the same: use 
+                math to understand the world a little better and build tools that are both 
+                technically solid and genuinely useful.
               </p>
 
               {/* Skills */}
