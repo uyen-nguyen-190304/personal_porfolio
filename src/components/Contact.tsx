@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,21 +11,50 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Demo form - show success message
-    toast({
-      title: "Thanks for reaching out!",
-      description: "This is a demo form. Feel free to email me directly at alex.chen@example.com",
-    });
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // Reset form
-    setName("");
-    setEmail("");
-    setMessage("");
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!serviceId || !templateId || !publicKey) {
+      toast({
+        title: "Email service not configured",
+        description: "Add your EmailJS credentials to the environment variables to enable sending.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSending(true);
+    try {
+      await emailjs.send(serviceId, templateId, {
+        from_name: name,
+        reply_to: email,
+        message,
+      }, publicKey);
+
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out — I'll get back to you soon.",
+      });
+
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("EmailJS error", error);
+      toast({
+        title: "Something went wrong",
+        description: "Unable to send your message right now. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -49,13 +79,13 @@ export default function Contact() {
 
               <div className="space-y-4 mb-8">
                 <a
-                  href="mailto:alex.chen@example.com"
+                  href="mailto:thaouyen190304@gmail.com"
                   className="flex items-center gap-3 text-accent hover:text-accent-glow transition-colors group"
                 >
                   <div className="w-10 h-10 flex items-center justify-center rounded-full border border-accent/30 group-hover:border-accent group-hover:bg-accent/10 transition-all">
                     <Mail className="h-5 w-5" />
                   </div>
-                  <span className="text-lg font-medium">alex.chen@example.com</span>
+                  <span className="text-lg font-medium">thaouyen190304@gmail.com</span>
                 </a>
               </div>
 
@@ -64,7 +94,7 @@ export default function Contact() {
                 <p className="text-sm text-muted-foreground mb-4">Find me on:</p>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/uyen-nguyen-190304"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-accent hover:bg-accent/10 transition-all"
@@ -73,7 +103,7 @@ export default function Contact() {
                     <span className="text-sm font-medium">GitHub</span>
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/thaouyen-190304/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-accent hover:bg-accent/10 transition-all"
@@ -129,9 +159,10 @@ export default function Contact() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:scale-105"
+                  disabled={isSending}
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:scale-105 disabled:opacity-60 disabled:pointer-events-none"
                 >
-                  Send Message
+                  {isSending ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
