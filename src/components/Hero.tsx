@@ -46,7 +46,7 @@ export default function Hero() {
               Uyen Nguyen
             </h1>
             <div className="flex items-center gap-2 mb-6">
-              <p className="text-lg sm:text-xl text-muted-foreground">I'm a</p>
+              <p className="text-lg sm:text-xl text-muted-foreground">I'm a/an</p>
               <motion.span
                 key={currentRole}
                 initial={{ opacity: 0, y: 10 }}
@@ -64,21 +64,23 @@ export default function Hero() {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-4 mb-8 max-w-md">
               <Button
                 onClick={() => scrollToSection("#projects")}
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:scale-105"
+                className="flex-1 min-w-[100px] bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:scale-105"
               >
                 View My Projects
               </Button>
               <Button
-                onClick={() => scrollToSection("#contact")}
+                asChild
                 variant="outline"
                 size="lg"
-                className="border-accent/50 text-accent hover:bg-accent/10 transition-all hover:scale-105"
+                className="flex-1 min-w-[100px] border-accent/50 text-accent hover:bg-accent/10 transition-all hover:scale-105"
               >
-                Contact Me
+                <a href="https://drive.google.com/file/d/1i_cZySDtkFZiS4tIaS26Zi8aR3SFxeXE/view?usp=share_link" target="_blank" rel="noopener noreferrer">
+                  Grab my CV
+                </a>
               </Button>
             </div>
 
