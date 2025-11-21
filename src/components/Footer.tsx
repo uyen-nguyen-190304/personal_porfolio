@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center space-y-2">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Alex Chen. All rights reserved.
+            © {currentYear} Uyen Nguyen. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
             Built with React, TypeScript, TailwindCSS, and a love for math.
