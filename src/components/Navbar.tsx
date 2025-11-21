@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
+  { name: "Education", href: "#education" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
@@ -30,7 +31,7 @@ export default function Navbar() {
             onClick={() => scrollToSection("#home")}
             className="text-xl font-bold flex items-center gap-2 hover:text-accent transition-colors"
           >
-            Portfolio<span className="w-2 h-2 rounded-full bg-accent"></span>Uyen Nguyen
+            Portfolio<span className="w-2 h-2 rounded-full bg-accent"></span> Uyen Nguyen
           </button>
 
           {/* Desktop Navigation */}
