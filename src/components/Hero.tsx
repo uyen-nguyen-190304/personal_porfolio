@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const roles = [
-  "Applied Mathematician",
-  "Computer Science Student",
-  "Machine Learning Researcher",
-  "Software Engineer",
+  "Mathematician in Training",
+  "Aspiring Research Scientist",
+  "Software Engineer Hustler",
+  "Machine Learning Fellow"
 ];
 
 export default function Hero() {
@@ -30,8 +30,8 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient orbs */}
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-accent-glow/10 rounded-full blur-3xl"></div>
+      <div className="pointer-events-none absolute top-1/4 -left-48 w-96 h-96 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+      <div className="pointer-events-none absolute bottom-1/4 -right-48 w-96 h-96 bg-accent-glow/10 rounded-full blur-3xl -z-10"></div>
 
       <div className="max-w-6xl mx-auto px-4 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -43,7 +43,7 @@ export default function Hero() {
           >
             <p className="text-muted-foreground text-sm sm:text-base mb-2">Hi, I'm</p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text">
-              Alex Chen
+              Uyen Nguyen
             </h1>
             <div className="flex items-center gap-2 mb-6">
               <p className="text-lg sm:text-xl text-muted-foreground">I'm a</p>
@@ -59,9 +59,8 @@ export default function Hero() {
               </motion.span>
             </div>
             <p className="text-muted-foreground text-base sm:text-lg mb-8 leading-relaxed">
-              Passionate about solving complex problems at the intersection of mathematics, 
-              machine learning, and software engineering. I build intelligent systems that make 
-              an impact.
+              Rooted in mathematical rigor and a love of proofs, 
+              I develop algorithms and models that transform abstract theory into practical, high-performance applications.
             </p>
 
             {/* Action Buttons */}
@@ -86,7 +85,7 @@ export default function Hero() {
             {/* Social Links */}
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/uyen-nguyen-190304"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-border hover:border-accent hover:bg-accent/10 transition-all hover:scale-110"
@@ -95,7 +94,7 @@ export default function Hero() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/thaouyen-190304/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-border hover:border-accent hover:bg-accent/10 transition-all hover:scale-110"
@@ -104,7 +103,7 @@ export default function Hero() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:alex.chen@example.com"
+                href="mailto:thaouyen190304@gmail.com"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-border hover:border-accent hover:bg-accent/10 transition-all hover:scale-110"
                 aria-label="Email"
               >
