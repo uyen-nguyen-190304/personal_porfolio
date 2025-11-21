@@ -30,7 +30,7 @@ export default function Navbar() {
             onClick={() => scrollToSection("#home")}
             className="text-xl font-bold flex items-center gap-2 hover:text-accent transition-colors"
           >
-            Portfolio<span className="w-2 h-2 rounded-full bg-accent"></span>
+            Portfolio<span className="w-2 h-2 rounded-full bg-accent"></span>Uyen Nguyen
           </button>
 
           {/* Desktop Navigation */}
