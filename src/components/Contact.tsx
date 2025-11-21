@@ -1,5 +1,4 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,50 +10,19 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
   const { toast } = useToast();
 
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!serviceId || !templateId || !publicKey) {
-      toast({
-        title: "Email service not configured",
-        description: "Add your EmailJS credentials to the environment variables to enable sending.",
-        variant: "destructive",
-      });
-      return;
-    }
 
-    setIsSending(true);
-    try {
-      await emailjs.send(serviceId, templateId, {
-        from_name: name,
-        reply_to: email,
-        message,
-      }, publicKey);
+    toast({
+      title: "Email service coming soon",
+      description: "For now, feel free to email me directly at thaouyen190304@gmail.com.",
+    });
 
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out — I'll get back to you soon.",
-      });
-
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch (error) {
-      console.error("EmailJS error", error);
-      toast({
-        title: "Something went wrong",
-        description: "Unable to send your message right now. Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSending(false);
-    }
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -159,10 +127,9 @@ export default function Contact() {
                 </div>
                 <Button
                   type="submit"
-                  disabled={isSending}
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:scale-105 disabled:opacity-60 disabled:pointer-events-none"
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg shadow-accent/20 transition-all hover:scale-105"
                 >
-                  {isSending ? "Sending..." : "Send Message"}
+                  Send Message
                 </Button>
               </form>
             </div>
