@@ -5,7 +5,7 @@ const education = [
   {
     degree: "Denison University",
     institution: "Bachelors of Science, Mathematics & Computer Science",
-    date: "August 2022 - May 2026",
+    date: "Aug 2022 - May 2026",
     location: "Granville, OH",
     gpa: "3.91/4.00",
     highlights: [
@@ -18,7 +18,7 @@ const education = [
   {
     degree: "The American College of Greece",
     institution: "Study Abroad, Information Technology",
-    date: "September 2024 - December 2024",
+    date: "Sep 2024 - Dec 2024",
     location: "Athens, Greece",
     gpa: "4.00/4.00",
     highlights: [
