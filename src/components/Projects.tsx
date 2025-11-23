@@ -4,56 +4,53 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "Neural Network Optimizer",
-    subtitle: "Advanced ML Training Framework",
+    title: "Math Atlas",
+    subtitle: "Interactive Math Knowledge Platform",
     description:
-      "Built a custom neural network optimization library that reduces training time by 30% compared to standard optimizers. Implements novel adaptive learning rate algorithms.",
-    tech: ["Python", "PyTorch", "CUDA", "NumPy"],
+      "Designing a personal math portal that organizes undergraduate coursework, proofs, and problem sets into searchable, cross-linked topic maps with GRE Math Subject style review sections.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: "https://github.com",
     demo: "https://demo.com",
   },
   {
-    title: "Data Visualization Dashboard",
-    subtitle: "Interactive Analytics Platform",
+    title: "Algorithm Compilation",
+    subtitle: "Curated Library of Algorithms",
     description:
-      "Created a real-time data visualization dashboard for analyzing large datasets. Features interactive charts, custom filters, and exportable reports.",
-    tech: ["React", "TypeScript", "D3.js", "FastAPI"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+      "Implementing classic algorithms, including graph search, dynamic programming, divide and conquer, greedy methods, and network flows in clean, well-documented code with problem-driven examples.",
+    tech: ["C++", "Python"],
+    github: "https://github.com/uyen-nguyen-190304/algorithm-compilation",
   },
   {
-    title: "Algorithmic Trading Bot",
-    subtitle: "AI-Powered Trading System",
+    title: "Power Outage Predictor",
+    subtitle: "Weather-Driven Outage Forecasting",
     description:
-      "Developed an algorithmic trading system using machine learning for market prediction. Achieved 18% ROI in backtesting with risk management strategies.",
-    tech: ["Python", "Pandas", "Scikit-learn", "TA-Lib"],
-    github: "https://github.com",
+      "Built machine learning models to predict power outages from historical weather and infrastructure data, evaluating feature pipelines and improving recall on rare outage events.",
+    tech: ["Python", "Pandas", "Scikit-learn", "NumPy"],
+    github: "https://github.com/BTT-Abt-Global-1A/AI-Studio-Project",
   },
   {
-    title: "Natural Language Processor",
-    subtitle: "Text Analysis & Generation",
+    title: "PandOS Operating System",
+    subtitle: "Simplified UNIX-Style Operating System",
     description:
-      "Built a custom NLP pipeline for sentiment analysis and text generation. Processes 100K+ documents with 92% accuracy using transformer models.",
-    tech: ["Python", "Transformers", "spaCy", "TensorFlow"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+      "Created a simplified operating system implementing process scheduling, memory management, exception/interrupt handling, device I/O operations, and system calls.",
+    tech: ["C", "GDB", "Git"],
+    github: "https://github.com/uyen-nguyen-190304/cs372-operating-systems",
   },
   {
-    title: "Mathematical Modeling Tool",
-    subtitle: "Computational Mathematics",
+    title: "Real-time AQI Prediction",
+    subtitle: "Hybrid Air Quality Forecasting",
     description:
-      "Created a computational tool for solving complex differential equations and visualizing mathematical models. Used in research publications.",
-    tech: ["Python", "SageMath", "Matplotlib", "SymPy"],
-    github: "https://github.com",
+      "Built hybrid LSTM model with embeddings layers to produce accurate, location-aware air quality predictions from historical pollution and weather data.",
+    tech: ["Python", "Pandas", "PyTorch", "Scikit-learn"],
+    github: "https://github.com/uyen-nguyen-190304/AI4ALL_final_project",
   },
   {
-    title: "Computer Vision System",
-    subtitle: "Object Detection & Tracking",
+    title: "Object Detection with YOLOv8",
+    subtitle: "Traffic Sign Object Detection Pipeline",
     description:
-      "Implemented real-time object detection and tracking system using deep learning. Achieves 30 FPS with high accuracy on edge devices.",
-    tech: ["Python", "OpenCV", "YOLO", "TensorRT"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+      "Trained YOLOv8 on a custom dataset and built an end-to-end pipeline for data preprocessing, model training, inference, and visualization of detections.",
+    tech: ["Python", "PyTorch", "YOLOv8", "OpenCV"],
+    github: "https://github.com/uyen-nguyen-190304/object-detection-yolov8",
   },
 ];
 
