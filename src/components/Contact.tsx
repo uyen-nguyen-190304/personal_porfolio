@@ -80,7 +80,7 @@ export default function Contact() {
                     <span className="text-sm font-medium">LinkedIn</span>
                   </a>
                   <a
-                    href="/cv.pdf"
+                    href="https://drive.google.com/file/d/1i_cZySDtkFZiS4tIaS26Zi8aR3SFxeXE/view"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-accent hover:bg-accent/10 transition-all"
