@@ -3,39 +3,47 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    title: "Machine Learning Research Assistant",
-    organization: "University Research Lab",
-    date: "May 2024 – Present",
+    title: "Machine Learning Fellow",
+    organization: "Abt Global",
+    date: "Aug 2025 - Present",
     location: "Remote",
     points: [
-      "Developing novel deep learning architectures for time-series forecasting, achieving 15% improvement in prediction accuracy",
-      "Collaborating with a team of 5 researchers on large-scale data analysis using PyTorch and TensorFlow",
-      "Published 2 papers on optimization algorithms at top-tier ML conferences",
-      "Mentoring 3 undergraduate students in machine learning research methodologies",
+      "Co-develop an end-to-end ML pipeline merging 3.7M+ outage records with 7 years (2014-2020) of NOAA weather data and engineering 19 temporal, weather, and geographic features",
+      "Train and tune a Gradient Boosting model that achieved 73.4% accuracy and 0.811 ROC-AUC, outperforming both logistic regression baseline and naive majority-class predictor",
+      "Led data loading. preprocessing, and bootstrapped validation, and synthesized findings for stakeholders, showing that geographic/infrastructure factors are stronger outage drivers than weather alone"
+    ]
+  },
+  { 
+    title: "Research Assistant",
+    organization: "Department of Mathematics, Denison University (Advisor: Dr. Sara Clifton)",
+    date: "Mar 2025 - Present",
+    location: "Granville, OH",
+    points: [
+      "Build a standardized county-level dataset by cleaning and merging per-state 2008, 2016, and 2020 U.S. primary and general presidential election results into analysis-ready CSVs",
+      'Fit early turnout and voting-multiplier models linking primary dynamics to general-election outcomes, exploring patterns consistent with "voter complacency" theory across elections',
+      "Quantify primary competitiveness using Shannon entropy by state, party, and calendar date, and visualize how fragmentation evolves over the primary season"
+    ],
+  },
+  { 
+    title: "Research Assistant",
+    organization: "Department of Mathematics, Denison University (Advisor: Dr. Matthew Neal)",
+    date: "Jan 2024 - Present",
+    location: "Granville, OH",
+    points: [
+      "Study metric-linear norm criteria for algebraic structure in operator spaces, focusing on Jordan subalgebras of C*-algebras",
+      "Derive norm conditions for 2 x 2 and 4 x 4 matrices real unitary upper-triangular matrices that guarantee nilpotency",
+      "Formulate and investigate conjectural norm conditions for arbitary n x n matrices and inifite-dimensional spaces",
     ],
   },
   {
-    title: "Software Engineering Intern",
-    organization: "Tech Innovations Inc",
-    date: "June 2023 – August 2023",
-    location: "San Francisco, CA",
+    title: "Research Assistant",
+    organization: "Department of Mathematics, The Ohio State University (Advisor: Dr. Ghaith Hiary)",
+    date: "May 2025 - July 2025",
+    location: "Columbus, OH",
     points: [
-      "Built scalable REST APIs using Python and FastAPI, handling 10K+ requests per minute",
-      "Implemented CI/CD pipelines reducing deployment time by 40%",
-      "Collaborated with cross-functional teams using Agile methodologies",
-      "Contributed to open-source projects improving code quality and documentation",
-    ],
-  },
-  {
-    title: "Data Science Intern",
-    organization: "Analytics Solutions Corp",
-    date: "January 2023 – May 2023",
-    location: "Boston, MA",
-    points: [
-      "Analyzed large datasets using Pandas and NumPy to extract actionable business insights",
-      "Developed predictive models with 85% accuracy for customer behavior forecasting",
-      "Created interactive data visualizations using Plotly and Streamlit",
-      "Presented findings to stakeholders, influencing strategic business decisions",
+      "Conducted research on the Generalized Riemann Hypothesis (GRH) for quadratic Dirichlet L-functions, extending an inequality-based verification theorem to negative fundamental discriminants",
+      "Designed and implemented a modular computational pipeline in Python, SageMath, and lcalc with parallel processing to efficiently verify GRH for over 2 million discriminants up to 12.0",
+      "Analyzed the asymptotic behavior of zero counts and fited empirical models to characterize how the number of zeros required for verification grows with discriminant size and height",
     ],
   },
 ];
